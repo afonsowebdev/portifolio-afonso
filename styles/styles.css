@@ -24,6 +24,15 @@
     --background-about: #1a1a40;
     --background-projects: #28284d;
     --background-contact: #333366;
+
+    /* Skills Color */
+    --color-html: #E34F26;
+    --color-css: #1572B6;
+    --color-javascript: #F7DF1E;
+    --color-react: #61DAFB;
+    --color-bootstrap: #7952B3;
+    --color-php: #777BB4;
+    --color-mysql: #00758F;
 }
 
 /* Body Styles */
@@ -45,7 +54,7 @@ header {
     padding: 20px 50px;
     background: var(--primary-color);
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -195,4 +204,153 @@ section {
     border: 5px solid var(--tertiary-color);
     border-radius: 50%;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section Styles */
+.about {
+    width: 100%;
+    height: auto;   
+    padding: 100px 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about .about-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.about .about-paragraph {
+    text-align: center;
+    font-size: 1em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.about .about-description {
+    font-size: 1em;
+    color: var(--secondary-color);
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* About Skills */
+.about .about-skills {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+}
+
+.about .about-skills .skills-subtitle {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about .about-skills .skills-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.about .about-skills .skills-list .skills-item {
+    background: var(--quaternary-color);
+    padding: 20px 30px;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.about .about-skills .skills-list .skills-item:hover {
+    transform: scale(1.05);
+}
+
+#html:hover{
+    background-color: var(--color-html);
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+#css:hover {
+    background-color: var(--color-css);
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+#javascript:hover {
+    background-color: var(--color-javascript);
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+#react:hover {
+    background-color: var(--color-react);
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+#bootstrap:hover {
+    background-color: var(--color-bootstrap);
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+#php:hover {
+    background-color: var(--color-php);
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+#mysql:hover {
+    background-color: var(--color-mysql);
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.about-button .btn {
+    background: var(--tertiary-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    margin-right: 10px;
+    transition: background 0.3s ease;
+}
+
+.about-button .btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Projects Section Styles */
+.projects {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projects .projects-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 5px;
 }

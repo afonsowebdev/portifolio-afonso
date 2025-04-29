@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Sections com Container</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        section {
+            height: 100vh;
+            /* Cada section ocupa 100% da altura da tela */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            /* padding: 0 2rem; */
+            text-align: center;
+        }
+
+        /* Cores diferentes para cada seção */
+        .hero {
+            background-color: #0a0a23;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 50%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .sobre {
+            background-color: #1a1a40;
+            color: #fff;
+        }
+
+        .projetos {
+            background-color: #28284d;
+            color: #fff;
+        }
+
+        .contato {
+            background-color: #333366;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero" id="hero">
+                <div class="hero-content">
+                    <h2 class="hero-subtitle">Olá, eu sou </h2>
+                    <h1 class="hero-title"><span>Francisco Afonso</span></h1>
+                    <h3 class="hero-">Sou Desenvolvedor Front-End</h3>
+                    <p class="hero-description">
+                        Focado na criação de interfaces eficientes e responsivas, aplicando as melhores práticas de desenvolvimento para proporcionar experiências intuitivas e de alto desempenho.
+                    </p>
+
+                    <div class="hero-button">
+                        <a href="#projects" class="btn">Ver projetos</a>
+                        <a href="#contact" class="btn btn-secondary">Entre em contato</a>
+                    </div>
+                </div>
+                <div class="hero-img">
+                    <img src="./images/foto de perfil.png" alt="Foto de Perfil de Francisco Afonso">
+                </div>
+        </div>
+    </section>
+
+    <section class="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Sou um desenvolvedor apaixonado por Front-End.</p>
+        </div>
+    </section>
+
+    <section class="projetos">
+        <div class="container">
+            <h2>Meus Projetos</h2>
+            <p>Aqui você verá alguns dos meus trabalhos recentes.</p>
+        </div>
+    </section>
+
+    <section class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Vamos conversar! Me envie uma mensagem.</p>
+        </div>
+    </section>
+
+</body>
+
+</html>
