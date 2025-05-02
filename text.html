@@ -1,117 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Sections com Container</title>
+    <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        section {
-            height: 100vh;
-            /* Cada section ocupa 100% da altura da tela */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            width: 100%;
-            /* padding: 0 2rem; */
-            text-align: center;
-        }
-
-        /* Cores diferentes para cada seção */
-        .hero {
-            background-color: #0a0a23;
-            color: #fff;
+        /* Estilos base */
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2rem;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
         }
 
-        .hero-content {
-            max-width: 50%;
-            text-align: left;
+        .menu {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             gap: 1rem;
+            list-style: none;
         }
 
-        .sobre {
-            background-color: #1a1a40;
-            color: #fff;
+        .menu li a {
+            color: white;
+            text-decoration: none;
         }
 
-        .projetos {
-            background-color: #28284d;
-            color: #fff;
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
         }
 
-        .contato {
-            background-color: #333366;
-            color: #fff;
+        /* Breakpoint para telas menores */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background: #444;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                padding: 1rem;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
         }
     </style>
+
+
+
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Meu Portfólio</div>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <ul class="menu" id="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero" id="hero">
-                <div class="hero-content">
-                    <h2 class="hero-subtitle">Olá, eu sou </h2>
-                    <h1 class="hero-title"><span>Francisco Afonso</span></h1>
-                    <h3 class="hero-">Sou Desenvolvedor Front-End</h3>
-                    <p class="hero-description">
-                        Focado na criação de interfaces eficientes e responsivas, aplicando as melhores práticas de desenvolvimento para proporcionar experiências intuitivas e de alto desempenho.
-                    </p>
 
-                    <div class="hero-button">
-                        <a href="#projects" class="btn">Ver projetos</a>
-                        <a href="#contact" class="btn btn-secondary">Entre em contato</a>
-                    </div>
-                </div>
-                <div class="hero-img">
-                    <img src="./images/foto de perfil.png" alt="Foto de Perfil de Francisco Afonso">
-                </div>
-        </div>
-    </section>
-
-    <section class="sobre">
-        <div class="container">
-            <h2>Sobre Mim</h2>
-            <p>Sou um desenvolvedor apaixonado por Front-End.</p>
-        </div>
-    </section>
-
-    <section class="projetos">
-        <div class="container">
-            <h2>Meus Projetos</h2>
-            <p>Aqui você verá alguns dos meus trabalhos recentes.</p>
-        </div>
-    </section>
-
-    <section class="contato">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <p>Vamos conversar! Me envie uma mensagem.</p>
-        </div>
-    </section>
 
 </body>
+
+<script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+</script>
 
 </html>
