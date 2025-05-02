@@ -392,3 +392,24 @@ section {
     border-radius: 5px;
     margin-bottom: 10px;
 }
+
+.projects .projects-content .name-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .projects .projects-content .project-card .project-name {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+} */
+
+.projects .projects-content .project-card .project-description {
+    text-align: center;
+    font-size: 14px;
+    color: var(--secondary-color);
+    margin-top: 10px;
+}
+
