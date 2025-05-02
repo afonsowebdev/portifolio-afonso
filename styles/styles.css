@@ -272,7 +272,6 @@ section {
     width: 200px;
     cursor: pointer;
     transition: transform 0.3s ease;
-
 }
 
 .about .about-skills .skills-list .skills-item:hover {
@@ -339,7 +338,7 @@ section {
 /* Projects Section Styles */
 .projects {
     width: 100%;
-    height: 100vh;
+    height: 100vh auto;
     padding: 100px 0;
     display: flex;
     justify-content: center;
