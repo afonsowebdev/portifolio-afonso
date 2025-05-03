@@ -984,9 +984,4 @@ footer {
         font-size: 0.9em;
     }
 
-    footer .footer-content .social-media-footer {
-        flex-direction: column;
-        align-items: center;
-    }
-
 }
