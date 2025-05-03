@@ -801,10 +801,13 @@ footer {
 
     .hero .hero-img {
         margin-top: 20px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
     }
 
     .hero .hero-img img {
-        max-width: 80%;
+        max-width: 60%;
         height: auto;
         border-radius: 50%;
     }
@@ -840,7 +843,7 @@ footer {
 
     .about .about-description {
         text-align: center;
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     .about .about-skills {
