@@ -241,6 +241,7 @@ section {
     animation: fadeIn 0.5s ease-in-out forwards;
     animation-delay: 0.5s;
 }
+
 @keyframes fadeIn {
     0% {
         transform: translateY(20px);
@@ -828,14 +829,14 @@ footer {
     }
 
     .hero .hero-img {
-        margin-top: 20px;
+        margin: 20px;
         width: 100%;
         max-width: 400px;
         height: auto;
     }
 
     .hero .hero-img img {
-        max-width: 60%;
+        max-width: 70%;
         height: auto;
         border-radius: 50%;
     }
@@ -1058,4 +1059,3 @@ footer {
     }
 }
 
-/
