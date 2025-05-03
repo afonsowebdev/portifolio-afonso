@@ -6,25 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* Estilos base */
         .navbar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: #111;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem;
-            background: #333;
-            color: #fff;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
         }
 
-        .menu {
+        .navbar.scrolled {
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-menu {
             display: flex;
             gap: 1rem;
             list-style: none;
         }
 
-        .menu li a {
+        .nav-link {
             color: white;
             text-decoration: none;
+        }
+
+        .nav-link.active {
+            color: #00d9ff;
+            border-bottom: 2px solid #00d9ff;
         }
 
         .menu-toggle {
@@ -33,20 +47,21 @@
             cursor: pointer;
         }
 
-        /* Breakpoint para telas menores */
+        /* Mobile */
         @media (max-width: 768px) {
-            .menu {
+            .nav-menu {
                 display: none;
                 flex-direction: column;
-                background: #444;
-                position: absolute;
+                position: fixed;
                 top: 60px;
+                left: 0;
                 right: 0;
-                width: 200px;
-                padding: 1rem;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                padding: 2rem;
             }
 
-            .menu.active {
+            .nav-menu.active {
                 display: flex;
             }
 
@@ -55,36 +70,60 @@
             }
         }
     </style>
-
-
-
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Meu Portfólio</div>
-            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-            <ul class="menu" id="menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="navbar">
+        <div class="logo">Meu Portfólio</div>
+        <div id="menu-toggle" class="menu-toggle">&#9776;</div>
+        <ul id="menu" class="nav-menu">
+            <li><a href="#hero" class="nav-link">Início</a></li>
+            <li><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li><a href="#projetos" class="nav-link">Projetos</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
     </header>
 
-
-
 </body>
-
 <script>
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
-
+    const header = document.querySelector('header');
+    const navLinks = document.querySelectorAll('.nav-link');
+  
+    // Abrir/fechar menu mobile
     toggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
+      menu.classList.toggle('active');
     });
-</script>
+  
+    // Scroll suave + fechar menu + active
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault(); // Evita o pulo brusco
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+  
+        // Scroll suave
+        target.scrollIntoView({ behavior: 'smooth' });
+  
+        // Fecha o menu (mobile)
+        menu.classList.remove('active');
+  
+        // Atualiza a classe active
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  
+    // Fusco no header ao rolar
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+  
 
 </html>

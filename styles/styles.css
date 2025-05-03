@@ -64,6 +64,13 @@ header {
     z-index: 3;
 }
 
+header.scrolled {
+    background-color: var(--primary-color);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease;
+}
+
 header .logo {
     font-size: 2rem;
     font-weight: 700;
@@ -107,6 +114,12 @@ header .nav .nav-menu .menu-item:hover::after {
 
 header .nav .nav-menu .menu-item.active::after {
     width: 100%;
+}
+
+header .nav .nav-menu .menu-item .nav-link.active {
+    color: var(--tertiary-color);
+    
+
 }
 
 header .nav .menu-toggle {
