@@ -19,7 +19,8 @@ menuLinks.forEach(link => {
     });
 });
 
-// Fecha o menu ao clicar fora dele
+// Mudar a class active do menu de navegação quando for clicado
+// Adiciona a classe active ao link clicado e remove dos outros
 navLinks.forEach(link => {
     link.addEventListener('click', function () {
         navLinks.forEach(l => l.classList.remove('active')); // remove dos outros
@@ -27,7 +28,8 @@ navLinks.forEach(link => {
     });
 });
 
-
+// Mudar a classe active do menu de navegação quando for clicado
+// Adiciona a classe active ao item clicado e remove dos outros
 menuItem.forEach(link => {
     link.addEventListener('click', function () {
         menuItem.forEach(l => l.classList.remove('active')); // remove dos outros
@@ -56,9 +58,6 @@ scrollToTopBtn.addEventListener('click', () => {
         history.pushState("", document.title, window.location.pathname + window.location.search);
     }
 });
-
-
-
 
 //Scroll para a o header
 // Para podermos criar uma interação para poder fazer o scroll do header e necessário buscar a class header que é o nosso cabeçalho e adicionar uma classe scrolled quando o usuário rolar a página para baixo

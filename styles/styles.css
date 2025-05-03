@@ -45,8 +45,13 @@ body {
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-
+    transition: all 0.3s ease;
 }
+
+html:hover {
+    scroll-behavior: smooth;
+}
+
 
 /* Header Styles */
 header {
@@ -118,7 +123,7 @@ header .nav .nav-menu .menu-item.active::after {
 
 header .nav .nav-menu .menu-item .nav-link.active {
     color: var(--tertiary-color);
-    
+
 
 }
 
@@ -129,6 +134,13 @@ header .nav .menu-toggle {
 }
 
 @media (max-width: 768px) {
+    header {
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 10px 20px;
+    }
+
     header .nav .nav-menu {
         display: none;
         flex-direction: column;
@@ -151,8 +163,8 @@ header .nav .menu-toggle {
     header .nav .nav-menu.active {
         display: flex;
     }
-    
-    header .social-media .social-link {
+
+    header .social-media {
         display: none;
     }
 
@@ -724,12 +736,33 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+
+    }
+
+    section {
+        padding: 20px 10px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
     header {
         padding: 10px 20px;
     }
 
+    /* Hero */
+
     .hero {
+        height: calc(100vh - 80px);
+        padding-top: 80px;
+        padding-bottom: 20px;
         flex-direction: column;
+        justify-self: center;
         align-items: center;
         text-align: center;
     }
@@ -738,10 +771,77 @@ footer {
         max-width: 100%;
     }
 
-    .about,
-    .projects,
-    .contact {
-        padding: 50px 0;
+    .hero .hero-content .hero-title {
+        font-size: 2.5em;
+    }
+
+    .hero .hero-content .hero-subtitle {
+        font-size: 1.2em;
+    }
+
+    .hero .hero-content .hero-description {
+        text-align: center;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .hero .hero-content .hero-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero .hero-img {
+        margin-top: 20px;
+    }
+
+    .hero .hero-img img {
+        max-width: 50%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .hero .hero-button .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .hero .hero-button .btn-secondary {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    /* About */
+
+    .about {
+        padding: 20px 10px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about .about-title {
+        font-size: 2em;
+    }
+
+    .about .about-paragraph {
+        font-size: 1em;
+    }
+
+    .about .about-description {
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    .about .about-skills {
+        padding: 20px 0;
+    }
+
+    .about .about-skills .skills-subtitle {
+        font-size: 1.5em;
     }
 
     .about .about-skills .skills-list {
@@ -749,13 +849,144 @@ footer {
         align-items: center;
     }
 
+    .about .about-skills .skills-list .skills-item {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .about .about-skills .skills-list .skills-item:hover {
+        transform: scale(1.05);
+    }
+
+    .about-button .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    /* Project */
+
+    .projects {
+        padding: 20px 10px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .projects .project-title {
+        font-size: 2em;
+    }
+
+    .projects .project-paragraph {
+        font-size: 0.9em;
+    }
+
     .projects .projects-content {
         flex-direction: column;
         align-items: center;
+    }
+
+    .projects .projects-content .project-card {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .projects .projects-content .project-card:hover {
+        transform: scale(1.05);
+    }
+
+    .projects .projects-content .project-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    /* .projects .projects-content .name-link {
+        flex-direction: column;
+        align-items: center;
+    } */
+
+    .projects .projects-content .name-link .project-name {
+        font-size: 1.5em;
+    }
+
+    .projects .projects-content .name-link .project-name:hover {
+        color: var(--tertiary-color);
+    }
+
+    /* Contact */
+
+    .contact {
+        padding: 20px 10px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contact .contact-title {
+        font-size: 2em;
+    }
+
+    .contact .contact-paragraph {
+        font-size: 0.9em;
     }
 
     .contact .contact-content {
         flex-direction: column;
         align-items: center;
     }
+
+    .contact .contact-content .contact-form {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+    }
+
+    .contact .contact-content .contact-form input,
+    .contact .contact-content .contact-form textarea {
+        font-size: 0.9em;
+    }
+
+    .contact .contact-content .contact-form button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 20px 10px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-content .footer-logo {
+        font-size: 1.5rem;
+    }
+
+    footer .footer-content .footer-text {
+        font-size: 0.9em;
+    }
+
+    footer .footer-content .social-media-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
