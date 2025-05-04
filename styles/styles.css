@@ -364,7 +364,7 @@ section {
 .about .about-skills .skills-list .skills-item {
     background: var(--quaternary-color);
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
     width: 200px;
     cursor: pointer;
@@ -389,7 +389,6 @@ section {
     background-color: transparent;
     border: 1px solid var(--color-html);
     color: var(--secondary-color);
-    font-weight: 500;
     box-shadow: 0 5px 10px var(--color-html);
 }
 
@@ -397,47 +396,41 @@ section {
     background-color: transparent;
     border: 1px solid var(--color-css);
     color: var(--secondary-color);
-    font-weight: 500;
     box-shadow: 0 5px 10px var(--color-css);
 }
 
 #javascript:hover {
     background-color: transparent;
     border: 1px solid var(--color-javascript);
-    color: var(--secondary-color);
-    font-weight: 500;
+    color: var(--secondary-color); 
     box-shadow: 0 5px 10px var(--color-javascript);
 }
 
 #react:hover {
     background-color: transparent;
     border: 1px solid var(--color-react);
-    color: var(--secondary-color);
-    font-weight: 500;
+    color: var(--secondary-color); 
     box-shadow: 0 5px 10px var(--color-react);
 }
 
 #bootstrap:hover {
     background-color: transparent;
     border: 1px solid var(--color-bootstrap);
-    color: var(--secondary-color);
-    font-weight: 500;
+    color: var(--secondary-color); 
     box-shadow: 0 5px 10px var(--color-bootstrap);
 }
 
 #php:hover {
     background-color: transparent;
     border: 1px solid var(--color-php);
-    color: var(--secondary-color);
-    font-weight: 500;
+    color: var(--secondary-color); 
     box-shadow: 0 5px 10px var(--color-php);
 }
 
 #mysql:hover {
     background-color: transparent;
     border: 1px solid var(--color-mysql);
-    color: var(--secondary-color);
-    font-weight: 500;
+    color: var(--secondary-color); 
     box-shadow: 0 5px 10px var(--color-mysql);
 }
 
@@ -527,7 +520,7 @@ section {
     margin-bottom: 10px;
 }
 
-.projects .projects-content .name-link .project-name:hover {
+/* .projects .projects-content .name-link .project-name:hover {
     color: var(--tertiary-color);
 }
 
@@ -544,11 +537,11 @@ section {
 
 .projects .projects-content .name-link .project-name:hover::after {
     width: 100%;
-}
+} */
 
 .projects .projects-content .name-link .project-link a {
     position: relative;
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     font-size: 1.5em;
     margin-left: 10px;
     transition: color 0.3s ease;
