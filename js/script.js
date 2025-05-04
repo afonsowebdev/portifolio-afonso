@@ -68,3 +68,23 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled');
     }
 });
+
+/* Enviar mensagem via whatsApp */
+document.getElementById('whatsapp-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const assunto = document.getElementById('assunto').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    // Substitua pelo seu número com DDI e DDD — sem espaços ou traços
+    const numeroWhatsApp = "351916995148"; // Exemplo: Portugal
+
+    // Monta a mensagem
+    const texto = `Olá! Me chamo ${nome}%0AAssunto: ${assunto}%0AMensagem: ${mensagem}`;
+
+    const msgCodificada = encodeURIComponent(texto);
+
+    // Redireciona para o WhatsApp
+    window.open(`https://wa.me/${numeroWhatsApp}?text=${texto}`, '_blank');
+});
