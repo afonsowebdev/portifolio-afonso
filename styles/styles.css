@@ -492,11 +492,12 @@ section {
     text-align: center;
     width: 360px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .projects .projects-content .project-card:hover {
     transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 5px 10px var(--tertiary-color);
 }
 
 .projects .projects-content .project-card img {
@@ -770,11 +771,17 @@ footer {
     font-size: 1.5rem;
     align-items: center;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.6s ease;
 }
 
 .footer .scroll-up:hover {
+    transform: scale(1.05);
     background: var(--secondary-color);
+    box-shadow: 0 2px 8px var(--tertiary-color);
+}
+
+.footer .scroll-up a {
+    color: var(--primary-color);
 }
 
 .footer .scroll-up:active {
