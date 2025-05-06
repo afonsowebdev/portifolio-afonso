@@ -523,9 +523,9 @@ section {
 }
 
 .projects .projects-content .name-link .project-link a:hover {
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
 }
-
+/* 
 .projects .projects-content .name-link .project-link a::after {
     content: '';
     position: absolute;
@@ -539,7 +539,7 @@ section {
 
 .projects .projects-content .name-link .project-link a:hover::after {
     width: 100%;
-}
+} */
 
 /* Contact */
 .contact {
@@ -693,13 +693,9 @@ footer {
 
 .footer .footer-content .footer-text .footer-link {
     position: relative;
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     font-size: 1em;
     transition: color 0.3s ease;
-}
-
-.footer .footer-content .footer-text .footer-link:hover {
-    color: var(--secondary-color);
 }
 
 .footer .footer-content .footer-text .footer-link::after {
@@ -709,7 +705,7 @@ footer {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
     transition: width 0.5s ease;
 }
 
