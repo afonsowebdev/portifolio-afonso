@@ -426,14 +426,13 @@ section {
     max-width: 1200px;
     width: 100%;
     height: auto; /* usar auto ou ajustar conforme o conteúdo */
-    padding: 90px 0;
+    padding: 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    scroll-margin-top: 50px; /* ⬅️ altura da sua navbar fixa */
+    scroll-margin-top: 50px; /* altura da sua navbar fixa */
 }
-
 
 .projects .project-title {
     font-size: 2.5em;
@@ -460,28 +459,30 @@ section {
 }
 
 .projects .projects-content .project-card {
-    /* background: rgba(225, 225, 225, 0.05); */
-    padding: 10px;
-    border-radius: 5px;
+    background: rgba(225, 225, 225, 0.05);
+    /* padding: 5px; */
+    border-radius: none;
     text-align: center;
     width: 360px;
     cursor: pointer;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
 }
 
 .projects .projects-content .project-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 5px 10px var(--tertiary-color);
+    transform: translateY(-5px) scale(1.01);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
 }
 
 .projects .projects-content .project-card img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    
     margin-bottom: 10px;
 }
 
 .projects .projects-content .name-link {
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -513,6 +514,8 @@ section {
 .projects .projects-content .name-link .project-name:hover::after {
     width: 100%;
 } */
+
+
 
 .projects .projects-content .name-link .project-link a {
     position: relative;
@@ -937,8 +940,7 @@ footer {
 
     .projects .projects-content .project-card {
         width: 100%;
-        max-width: 300px;
-        padding: 10px;
+        max-width: 400px;
         font-size: 0.9em;
     }
 
@@ -949,7 +951,6 @@ footer {
     .projects .projects-content .project-card img {
         max-width: 100%;
         height: auto;
-        border-radius: 5px;
         margin-bottom: 10px;
     }
 
