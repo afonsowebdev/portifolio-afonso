@@ -103,7 +103,15 @@ header .nav .nav-menu .menu-item {
 }
 
 header .nav .nav-menu .menu-item a {
+    font-size: 1rem;
     color: var(--secondary-color);
+}
+
+header .nav .nav-menu .menu-item a i {
+    color: var(--tertiary-color);
+    align-items: center;
+    font-size: .900rem;
+    font-weight: 400;
 }
 
 header .nav .nav-menu .menu-item::after {

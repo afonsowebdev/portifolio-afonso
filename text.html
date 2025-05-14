@@ -4,127 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Document</title>
+
     <style>
-        .navbar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            padding: 1rem 2rem;
-            background: #111;
+        .skills-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            background-color: #0f0f0f;
+        }
+
+        .skill-card {
+            background-color: #111;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            z-index: 1000;
-            transition: background-color 0.3s ease;
-        }
-
-        .navbar.scrolled {
-            background-color: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 1rem;
-            list-style: none;
-        }
-
-        .nav-link {
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-link.active {
-            color: #00d9ff;
-            border-bottom: 2px solid #00d9ff;
-        }
-
-        .menu-toggle {
-            display: none;
+            justify-content: center;
+            border-radius: 50%;
             font-size: 2rem;
-            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.05);
         }
 
-        /* Mobile */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                position: fixed;
-                top: 60px;
-                left: 0;
-                right: 0;
-                width: 100%;
-                background: rgba(0, 0, 0, 0.9);
-                padding: 2rem;
-            }
+        .purple {
+            color: #b56cff;
+        }
 
-            .nav-menu.active {
-                display: flex;
-            }
+        .blue {
+            color: #00cfff;
+        }
 
-            .menu-toggle {
-                display: block;
-            }
+        .green {
+            color: #00ff88;
+        }
+
+        .yellow {
+            color: #ffcc00;
+        }
+
+        .skill-card h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-card p {
+            color: #ccc;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
     </style>
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="logo">Meu Portfólio</div>
-        <div id="menu-toggle" class="menu-toggle">&#9776;</div>
-        <ul id="menu" class="nav-menu">
-            <li><a href="#hero" class="nav-link">Início</a></li>
-            <li><a href="#sobre" class="nav-link">Sobre</a></li>
-            <li><a href="#projetos" class="nav-link">Projetos</a></li>
-            <li><a href="#contato" class="nav-link">Contato</a></li>
-        </ul>
-    </header>
+    <section class="skills-section">
+        <div class="skill-card">
+            <div class="icon purple">
+                <i class='bx bx-code-alt'></i>
+            </div>
+            <h3>Desenvolvimento Web</h3>
+            <p>Criação de aplicativos web responsivos, acessíveis e de alto desempenho com estruturas e tecnologias
+                modernas.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="icon blue">
+                <i class='bx bx-brain'></i>
+            </div>
+            <h3>Integração de IA</h3>
+            <p>Aproveitando a inteligência artificial para criar soluções inteligentes e melhorar as experiências do
+                usuário.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="icon green">
+                <i class='bx bx-bolt-circle'></i>
+            </div>
+            <h3>Automação</h3>
+            <p>Simplificando fluxos de trabalho e processos por meio da automação para aumentar a eficiência e a
+                produtividade.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="icon yellow">
+                <i class='bx bx-star'></i>
+            </div>
+            <h3>Inovação</h3>
+            <p>Explorando constantemente novas tecnologias e abordagens para resolver problemas complexos de maneiras
+                criativas.</p>
+        </div>
+    </section>
+
 
 </body>
-<script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    const header = document.querySelector('header');
-    const navLinks = document.querySelectorAll('.nav-link');
-  
-    // Abrir/fechar menu mobile
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  
-    // Scroll suave + fechar menu + active
-    navLinks.forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault(); // Evita o pulo brusco
-        const targetId = this.getAttribute('href').substring(1);
-        const target = document.getElementById(targetId);
-  
-        // Scroll suave
-        target.scrollIntoView({ behavior: 'smooth' });
-  
-        // Fecha o menu (mobile)
-        menu.classList.remove('active');
-  
-        // Atualiza a classe active
-        navLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-  
-    // Fusco no header ao rolar
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-  </script>
-  
 
 </html>
