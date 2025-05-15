@@ -255,9 +255,10 @@ section {
 }
 
 .hero .hero-button .btn {
-    background: var(--tertiary-color);
-    color: var(--primary-color);
+    background: transparent;
+    color: var(--tertiary-color);
     padding: 10px 20px;
+    border: 1px solid var(--tertiary-color);
     border-radius: 5px;
     font-size: 1em;
     font-weight: 500;
@@ -265,20 +266,10 @@ section {
     transition: background 0.3s ease;
 }
 
-
 .hero .hero-button .btn:hover {
-    background: var(--secondary-color);
+    box-shadow: 0 0 20px var(--tertiary-color);
 }
 
-.hero .hero-button .btn-secondary {
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    font-weight: 500;
-    transition: background 0.3s ease;
-}
 
 .hero .hero-img img {
     max-width: 500px;
@@ -292,14 +283,24 @@ section {
 
 /* About Section Styles */
 .about {
-    width: 100%;
+    /* width: 100%;
     height: auto;
     padding: 100px 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; */
+
+    /* max-width: 1200px; */
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    scroll-margin-top: 50px;
 }
 
 .about .about-title {
@@ -317,29 +318,85 @@ section {
     margin-bottom: 20px;
 }
 
-.about .about-description {
+.about .about-content .about-description {
     font-size: 1em;
-    color: var(--secondary-color);
-    text-align: justify;
-    margin-bottom: 20px;
-}
-
-/* About Skills */
-.about .about-skills {
-    width: 100%;
-    height: auto;
-    padding: 20px 0;
-}
-
-.about .about-skills .skills-subtitle {
-    font-size: 1.5em;
-    font-weight: 700;
     color: var(--secondary-color);
     text-align: center;
     margin-bottom: 20px;
 }
 
-.about .about-skills .skills-list {
+.about .about-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.about .about-card {
+    background-color: none;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 6px var(--tertiary-color);
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.purple {
+    color: #b56cff;
+}
+
+.blue {
+    color: #00cfff;
+}
+
+.green {
+    color: #00ff88;
+}
+
+.yellow {
+    color: #ffcc00;
+}
+
+.about-card .about-card-title {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.about-card .about-card-paragraphon {
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* About Skills */
+.about .about-skills-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+.about .about-skills-paragraph {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about .about-skills-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -348,7 +405,7 @@ section {
     margin-bottom: 20px;
 }
 
-.about .about-skills .skills-list .skills-item {
+.about .about-skills-list .skills-item {
     background: var(--quaternary-color);
     padding: 10px 20px;
     border-radius: 10px;
@@ -358,8 +415,31 @@ section {
     transition: transform 0.5s ease-in-out;
 }
 
-.about .about-skills .skills-list .skills-item:hover {
+.about .about-skills-list .skills-item:hover {
     transform: translateY(-5px) scale(1.02);
+}
+
+.about .about-button {
+    margin: 20px 0;
+}
+
+.about .about-button .btn {
+    background-color: transparent;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 5px;
+    color: var(--tertiary-color);
+    padding: 10px 20px;
+    font-size: 16px;
+    display: block;
+    transition: .6s ease-out;
+}
+
+.about .about-button .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    border: none;
+    box-shadow: 0 0 20px var(--tertiary-color);
+    transform: scale(1.05);
 }
 
 #html,
@@ -372,88 +452,100 @@ section {
     transition: 0.5s ease;
 }
 
-#html/* :hover */ {
+#html
+
+/* :hover */
+    {
     background-color: transparent;
     border: 1px solid var(--color-html);
     color: var(--secondary-color);
     box-shadow: 0 5px 10px var(--color-html);
 }
 
-#css/* :hover */ {
+#css
+
+/* :hover */
+    {
     background-color: transparent;
     border: 1px solid var(--color-css);
     color: var(--secondary-color);
     box-shadow: 0 5px 10px var(--color-css);
 }
 
-#javascript/* :hover */ {
+#javascript
+
+/* :hover */
+    {
     background-color: transparent;
     border: 1px solid var(--color-javascript);
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
     box-shadow: 0 5px 10px var(--color-javascript);
 }
 
-#react/* :hover */ {
+#react
+
+/* :hover */
+    {
     background-color: transparent;
     border: 1px solid var(--color-react);
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
     box-shadow: 0 5px 10px var(--color-react);
 }
 
-#nodejs/* :hover */ {
+#nodejs
+
+/* :hover */
+    {
     background-color: transparent;
     border: 1px solid var(--color-nodejs);
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
     box-shadow: 0 5px 10px var(--color-nodejs);
 }
 
-#bootstrap/* :hover */ {
+#bootstrap
+
+/* :hover */
+    {
     background-color: transparent;
     border: 1px solid var(--color-bootstrap);
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
     box-shadow: 0 5px 10px var(--color-bootstrap);
 }
 
-#php/* :hover */ {
+#php
+
+/* :hover */
+    {
     background-color: transparent;
     border: 1px solid var(--color-php);
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
     box-shadow: 0 5px 10px var(--color-php);
 }
 
-#mysql/* :hover */ {
+#mysql
+
+/* :hover */
+    {
     background-color: transparent;
     border: 1px solid var(--color-mysql);
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
     box-shadow: 0 5px 10px var(--color-mysql);
 }
 
-.about-button .btn {
-    background: var(--tertiary-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    font-weight: 500;
-    margin-right: 10px;
-    transition: background 0.3s ease;
-}
-
-.about-button .btn:hover {
-    background: var(--secondary-color);
-}
 
 /* Projects Section Styles */
 .projects {
     max-width: 1200px;
     width: 100%;
-    height: auto; /* usar auto ou ajustar conforme o conteúdo */
+    height: auto;
+    /* usar auto ou ajustar conforme o conteúdo */
     padding: 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    scroll-margin-top: 50px; /* altura da sua navbar fixa */
+    scroll-margin-top: 50px;
+    /* altura da sua navbar fixa */
 }
 
 .projects .project-title {
@@ -498,7 +590,7 @@ section {
 .projects .projects-content .project-card img {
     max-width: 100%;
     height: auto;
-    
+
     margin-bottom: 10px;
 }
 
@@ -549,6 +641,7 @@ section {
 .projects .projects-content .name-link .project-link a:hover {
     color: var(--tertiary-color);
 }
+
 /* 
 .projects .projects-content .name-link .project-link a::after {
     content: '';
@@ -784,7 +877,9 @@ footer {
 
 
 @keyframes flutuar {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -885,6 +980,7 @@ footer {
     /* About */
 
     .about {
+        margin-bottom: 30px;
         padding: 20px 10px;
         height: auto;
         display: flex;
@@ -898,22 +994,27 @@ footer {
     }
 
     .about .about-paragraph {
-        font-size: 1em;
+        font-size: 16px;
     }
 
     .about .about-description {
         text-align: center;
-        font-size: 1em;
+        font-size: 1rem;
+    }
+
+    .about .about-cards {
+        display: flex;
+        flex-direction: column;
     }
 
     .about .about-skills {
         padding: 20px 0;
     }
 
-    .about .about-skills .skills-subtitle {
+    .about .about-skills .about-skills-subtitle {
         font-size: 1.5em;
     }
-
+    
     .about .about-skills .skills-list {
         flex-direction: column;
         align-items: center;
@@ -1087,4 +1188,3 @@ footer {
         font-size: 0.8em;
     }
 }
-
