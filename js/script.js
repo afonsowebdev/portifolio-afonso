@@ -94,14 +94,13 @@ document.getElementById('whatsapp-form').addEventListener('submit', function (e)
 
 
 
-
-/* toggleBtn.addEventListener('click', () => {
+toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 
     // Atualiza o texto do botão
     if (document.body.classList.contains('dark-mode')) {
-        toggleBtn.textContent = 'Claro';
+        toggleBtn.textContent = '☀️';
     } else {
-        toggleBtn.textContent = 'Escuro';
+        toggleBtn.textContent = '🌙';
     }
-}); */
+});

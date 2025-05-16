@@ -42,6 +42,11 @@ body {
     color: var(--secondary-color);
 }
 
+body.dark-mode {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
 /* HTML Styles */
 html {
     scroll-behavior: smooth;
@@ -663,7 +668,7 @@ section {
     border: 1px solid var(--tertiary-color);
     border-radius: 30px;
     padding: 10px 20px;
-    transition:  .5s ease-in-out;
+    transition: .5s ease-in-out;
 }
 
 .projects .project-btn:hover {
@@ -1044,7 +1049,7 @@ footer {
     .about .about-skills .about-skills-subtitle {
         font-size: 1.5em;
     }
-    
+
     .about .about-skills .skills-list {
         flex-direction: column;
         align-items: center;
