@@ -277,11 +277,11 @@ section {
     color: var(--tertiary-color);
     padding: 10px 20px;
     border: 1px solid var(--tertiary-color);
-    border-radius: 5px;
+    border-radius: 30px;
     font-size: 1em;
     font-weight: 500;
     margin-right: 10px;
-    transition: background 0.3s ease;
+    transition: .5s ease-in-out;
 }
 
 .hero .hero-button .btn:hover {
@@ -295,7 +295,7 @@ section {
     height: auto;
     /* border: 2px solid var(--tertiary-color); */
     border-radius: 50%;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
     animation: flutuar 5s ease-in-out infinite;
 }
 
@@ -418,7 +418,7 @@ section {
 .about .about-skills-list .skills-item {
     background: var(--quaternary-color);
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 30px;
     text-align: center;
     width: 200px;
     cursor: pointer;
@@ -436,7 +436,7 @@ section {
 .about .about-button .btn {
     background-color: transparent;
     border: 1px solid var(--tertiary-color);
-    border-radius: 5px;
+    border-radius: 30px;
     color: var(--tertiary-color);
     padding: 10px 20px;
     font-size: 16px;
@@ -597,7 +597,7 @@ section {
 }
 
 .projects .projects-content .project-card:hover {
-    transform: translateY(-5px) scale(1.01);
+    transform: translateY(-5px) scale(1.03);
     transition: transform 0.5s ease-in-out;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -661,12 +661,13 @@ section {
     background: transparent;
     color: var(--tertiary-color);
     border: 1px solid var(--tertiary-color);
-    border-radius: 5px;
+    border-radius: 30px;
     padding: 10px 20px;
+    transition:  .5s ease-in-out;
 }
 
 .projects .project-btn:hover {
-    border: none;
+    border: 1px solid var(--tertiary-color);
     box-shadow: 0 0 20px var(--tertiary-color);
 }
 
