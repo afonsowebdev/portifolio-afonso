@@ -1,5 +1,6 @@
 // Seletores principais
 const toggle = document.getElementById('menu-toggle');
+const close = document.getElementById('menu-close')
 const menu = document.getElementById('nav-menu');
 const menuLinks = document.querySelectorAll('.nav-link');
 const scrollToTopBtn = document.getElementById('scroll-up');
@@ -13,7 +14,7 @@ const toggleBtn = document.getElementById('toggle-dark-mode');
 
 // Alternar menu de navegação
 toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
+    menu.classList.add('active');
 });
 
 // Fechar menu ao clicar em um link
@@ -69,14 +70,14 @@ window.addEventListener('scroll', () => {
 });
 
 // ====== Modo Claro / Escuro ======
-toggleBtn.addEventListener('click', () => {
+/* toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 
     // Alterna o texto do botão
     toggleBtn.textContent = document.body.classList.contains('dark-mode')
         ? '☀️ Modo Claro'
         : '🌙 Modo Escuro';
-});
+}); */
 
 // ====== Enviar mensagem via WhatsApp ======
 document.getElementById('whatsapp-form').addEventListener('submit', function (e) {
