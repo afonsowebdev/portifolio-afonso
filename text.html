@@ -8,107 +8,68 @@
     <title>Document</title>
 
     <style>
-        .skills-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-            background-color: #0f0f0f;
-        }
-
-        .skill-card {
-            background-color: #111;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 1rem;
+        .projetos-container {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-size: 2rem;
-            background-color: rgba(255, 255, 255, 0.05);
+            flex-wrap: wrap;
+            gap: 16px;
         }
 
-        .purple {
-            color: #b56cff;
+        .projeto {
+            width: 200px;
+            padding: 16px;
+            background-color: #eee;
+            border-radius: 8px;
+            text-align: center;
         }
 
-        .blue {
-            color: #00cfff;
+        /* Esconde os extras inicialmente */
+        .hidden {
+            display: none;
         }
 
-        .green {
-            color: #00ff88;
-        }
-
-        .yellow {
-            color: #ffcc00;
-        }
-
-        .skill-card h3 {
-            color: #fff;
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-card p {
-            color: #ccc;
-            font-size: 0.95rem;
-            line-height: 1.5;
+        /* Garante que extras herdem o flex */
+        .projetos-extra {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
         }
     </style>
 </head>
 
 <body>
-    <section class="skills-section">
-        <div class="skill-card">
-            <div class="icon purple">
-                <i class='bx bx-code-alt'></i>
-            </div>
-            <h3>Desenvolvimento Web</h3>
-            <p>Criação de aplicativos web responsivos, acessíveis e de alto desempenho com estruturas e tecnologias
-                modernas.</p>
+    <div class="projetos-container">
+        <!-- Projetos visíveis por padrão -->
+        <div class="projeto">Projeto 1</div>
+        <div class="projeto">Projeto 2</div>
+        <div class="projeto">Projeto 3</div>
+
+        <!-- Projetos escondidos -->
+        <div class="projetos-extra hidden">
+            <div class="projeto">Projeto 4</div>
+            <div class="projeto">Projeto 5</div>
         </div>
 
-        <div class="skill-card">
-            <div class="icon blue">
-                <i class='bx bx-brain'></i>
-            </div>
-            <h3>Integração de IA</h3>
-            <p>Aproveitando a inteligência artificial para criar soluções inteligentes e melhorar as experiências do
-                usuário.</p>
-        </div>
+        <!-- Botão para alternar -->
+        <button id="toggle-btn">Ver mais</button>
+    </div>
 
-        <div class="skill-card">
-            <div class="icon green">
-                <i class='bx bx-bolt-circle'></i>
-            </div>
-            <h3>Automação</h3>
-            <p>Simplificando fluxos de trabalho e processos por meio da automação para aumentar a eficiência e a
-                produtividade.</p>
-        </div>
 
-        <div class="skill-card">
-            <div class="icon yellow">
-                <i class='bx bx-star'></i>
-            </div>
-            <h3>Inovação</h3>
-            <p>Explorando constantemente novas tecnologias e abordagens para resolver problemas complexos de maneiras
-                criativas.</p>
-        </div>
-    </section>
 
+
+    <script>
+        const toggleBtn = document.getElementById('toggle-btn');
+        const extraProjects = document.querySelector('.projetos-extra');
+
+        toggleBtn.addEventListener('click', () => {
+            if (extraProjects.classList.contains('hidden')) {
+                extraProjects.classList.remove('hidden');
+                toggleBtn.textContent = 'Ver menos';
+            } else {
+                extraProjects.classList.add('hidden');
+                toggleBtn.textContent = 'Ver mais';
+            }
+        });
+    </script>
 
 </body>
 

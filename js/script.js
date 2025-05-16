@@ -88,3 +88,17 @@ document.getElementById('whatsapp-form').addEventListener('submit', function (e)
     // Redireciona para o WhatsApp
     window.open(`https://wa.me/${numeroWhatsApp}?text=${texto}`, '_blank');
 });
+
+
+const toggleBtn = document.getElementById("toggle-btn");
+const extraProjects = document.querySelector(".projetos-extra");
+
+toggleBtn.addEventListener("click", () => {
+    if (extraProjects.style.display === "none") {
+        extraProjects.style.display = "block";
+        toggleBtn.textContent = "Ver menos";
+    } else {
+        extraProjects.style.display = "none";
+        toggleBtn.textContent = "Ver mais";
+    }
+});
