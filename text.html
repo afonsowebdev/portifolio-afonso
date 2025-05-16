@@ -22,12 +22,12 @@
             text-align: center;
         }
 
-        /* Esconde os extras inicialmente */
+        /* Esconde os projetos extras */
         .hidden {
             display: none;
         }
 
-        /* Garante que extras herdem o flex */
+        /* Garante que os projetos extras usem flex */
         .projetos-extra {
             display: flex;
             flex-wrap: wrap;
@@ -37,21 +37,23 @@
 </head>
 
 <body>
-    <div class="projetos-container">
-        <!-- Projetos visíveis por padrão -->
+    <section class="projetos-container">
+        <!-- Projetos visíveis -->
         <div class="projeto">Projeto 1</div>
         <div class="projeto">Projeto 2</div>
         <div class="projeto">Projeto 3</div>
 
-        <!-- Projetos escondidos -->
+        <!-- Projetos ocultos -->
         <div class="projetos-extra hidden">
             <div class="projeto">Projeto 4</div>
             <div class="projeto">Projeto 5</div>
+            <!-- Adicione mais projetos conforme necessário -->
         </div>
 
         <!-- Botão para alternar -->
         <button id="toggle-btn">Ver mais</button>
-    </div>
+    </section>
+
 
 
 
@@ -70,6 +72,7 @@
             }
         });
     </script>
+
 
 </body>
 
