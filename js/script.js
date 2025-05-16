@@ -1,11 +1,14 @@
-const toggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('nav-menu');
-const menuLinks = document.querySelectorAll('.nav-link');
-const scrollToTopBtn = document.getElementById('scroll-up');
-const hero = document.getElementById('hero');
-const header = document.querySelector('.header');
-const navLinks = document.querySelectorAll('.nav-link');
-const menuItem = document.querySelectorAll('.menu-item');
+const toggle = document.getElementById('menu-toggle'),
+    menu = document.getElementById('nav-menu'),
+    menuLinks = document.querySelectorAll('.nav-link'),
+    scrollToTopBtn = document.getElementById('scroll-up'),
+    hero = document.getElementById('hero'),
+    header = document.querySelector('.header'),
+    navLinks = document.querySelectorAll('.nav-link'),
+    menuItem = document.querySelectorAll('.menu-item');
+    toggleBtn = document.getElementById('toggle-dark-mode');
+
+/* Modo Escuto */
 
 //Criar evento do Menu Toggle
 toggle.addEventListener('click', () => {
@@ -90,15 +93,15 @@ document.getElementById('whatsapp-form').addEventListener('submit', function (e)
 });
 
 
-const toggleBtn = document.getElementById("toggle-btn");
-const extraProjects = document.querySelector(".projetos-extra");
 
-toggleBtn.addEventListener("click", () => {
-    if (extraProjects.style.display === "none") {
-        extraProjects.style.display = "block";
-        toggleBtn.textContent = "Ver menos";
+
+/* toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    // Atualiza o texto do botão
+    if (document.body.classList.contains('dark-mode')) {
+        toggleBtn.textContent = 'Claro';
     } else {
-        extraProjects.style.display = "none";
-        toggleBtn.textContent = "Ver mais";
+        toggleBtn.textContent = 'Escuro';
     }
-});
+}); */

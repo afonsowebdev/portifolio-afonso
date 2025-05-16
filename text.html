@@ -8,67 +8,58 @@
     <title>Document</title>
 
     <style>
-        .projetos-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
+        /* Modo Claro (padrão) */
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        .projeto {
-            width: 200px;
-            padding: 16px;
-            background-color: #eee;
+        /* Modo Escuro */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        /* Estilize o botão também, se quiser */
+        #toggle-dark-mode {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 16px;
+            border: none;
             border-radius: 8px;
-            text-align: center;
-        }
-
-        /* Esconde os projetos extras */
-        .hidden {
-            display: none;
-        }
-
-        /* Garante que os projetos extras usem flex */
-        .projetos-extra {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-    <section class="projetos-container">
-        <!-- Projetos visíveis -->
-        <div class="projeto">Projeto 1</div>
-        <div class="projeto">Projeto 2</div>
-        <div class="projeto">Projeto 3</div>
+    <button id="toggle-dark-mode">🌙 Modo Escuro</button>
 
-        <!-- Projetos ocultos -->
-        <div class="projetos-extra hidden">
-            <div class="projeto">Projeto 4</div>
-            <div class="projeto">Projeto 5</div>
-            <!-- Adicione mais projetos conforme necessário -->
-        </div>
-
-        <!-- Botão para alternar -->
-        <button id="toggle-btn">Ver mais</button>
-    </section>
+    <h1>Olá mundo</h1>
 
 
 
 
 
     <script>
-        const toggleBtn = document.getElementById('toggle-btn');
-        const extraProjects = document.querySelector('.projetos-extra');
+        const toggleBtn = document.getElementById('toggle-dark-mode');
 
         toggleBtn.addEventListener('click', () => {
-            if (extraProjects.classList.contains('hidden')) {
-                extraProjects.classList.remove('hidden');
-                toggleBtn.textContent = 'Ver menos';
+            document.body.classList.toggle('dark-mode');
+
+            // Atualiza o texto do botão
+            if (document.body.classList.contains('dark-mode')) {
+                toggleBtn.textContent = '☀️ Modo Claro';
             } else {
-                extraProjects.classList.add('hidden');
-                toggleBtn.textContent = 'Ver mais';
+                toggleBtn.textContent = '🌙 Modo Escuro';
             }
         });
     </script>

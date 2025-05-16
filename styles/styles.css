@@ -144,9 +144,16 @@ header .nav .nav-menu .menu-item.active::after {
 
 header .nav .nav-menu .menu-item .nav-link.active {
     color: var(--secondary-color);
-
-
 }
+
+/* header .darck-btn {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+header .darck-btn:hover {
+    color: var(--tertiary-color);
+} */
 
 header .nav .menu-toggle {
     display: none;
@@ -197,14 +204,14 @@ header .nav .menu-toggle {
 }
 
 header .social-media .social-link {
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     font-size: 1.5rem;
     margin-left: 10px;
     transition: color 0.3s ease;
 }
 
 header .social-media .social-link:hover {
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
 }
 
 /* Container */
@@ -650,6 +657,19 @@ section {
     color: var(--tertiary-color);
 }
 
+.projects .project-btn {
+    background: transparent;
+    color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.projects .project-btn:hover {
+    border: none;
+    box-shadow: 0 0 20px var(--tertiary-color);
+}
+
 /* 
 .projects .projects-content .name-link .project-link a::after {
     content: '';
@@ -743,14 +763,14 @@ section {
     background: var(--secondary-color);
 }
 
-.contact .contact-content .contact-form button:disabled {
+/* .contact .contact-content .contact-form button:disabled {
     background: var(--quaternary-color);
     cursor: not-allowed;
 }
 
 .contact .contact-content .contact-form button:disabled:hover {
     background: var(--quaternary-color);
-}
+} */
 
 /* footer */
 footer {
