@@ -1186,7 +1186,7 @@ footer {
 
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .hero .hero-content .hero-title {
         font-size: 2em;
     }
@@ -1218,4 +1218,45 @@ footer {
     .projects .project-paragraph {
         font-size: 0.8em;
     }
+}
+ */
+@media only screen and (max-height: 480px) and (orientation: landscape) {
+    /* Exemplo: reduzir fonte e reorganizar layout */
+    
+    body {
+        font-size: 90%;
+    }
+
+    .hero {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .hero-content,
+    .hero-img {
+        flex: 1 1 45%;
+    }
+
+    .hero-img img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about-cards {
+        grid-template-columns: repeat(2, 1fr); /* Ex: 2 cards por linha */
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .contact-form {
+        padding: 0.5rem;
+    }
+
+    /* Ajustes extras conforme necessário */
 }
