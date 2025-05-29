@@ -419,7 +419,7 @@ section {
 .about .about-skills-list .skills-item {
     background: var(--quaternary-color);
     padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 10px;
     text-align: center;
     width: 200px;
     cursor: pointer;
@@ -437,7 +437,7 @@ section {
 .about .about-button .btn {
     background-color: transparent;
     border: 1px solid var(--tertiary-color);
-    border-radius: 30px;
+    border-radius: 10px;
     color: var(--tertiary-color);
     padding: 10px 20px;
     font-size: 16px;
@@ -470,8 +470,9 @@ section {
     background-color: transparent;
     border: 1px solid var(--color-html);
     color: var(--secondary-color);
-    box-shadow: 0 5px 10px var(--color-html);
+    box-shadow: 0 2px 10px var(--color-html);
 }
+
 
 #css
 
@@ -480,7 +481,7 @@ section {
     background-color: transparent;
     border: 1px solid var(--color-css);
     color: var(--secondary-color);
-    box-shadow: 0 5px 10px var(--color-css);
+    box-shadow: 0 2px 10px var(--color-css);
 }
 
 #javascript
@@ -490,7 +491,7 @@ section {
     background-color: transparent;
     border: 1px solid var(--color-javascript);
     color: var(--secondary-color);
-    box-shadow: 0 5px 10px var(--color-javascript);
+    box-shadow: 0 2px 10px var(--color-javascript);
 }
 
 #react
@@ -500,7 +501,7 @@ section {
     background-color: transparent;
     border: 1px solid var(--color-react);
     color: var(--secondary-color);
-    box-shadow: 0 5px 10px var(--color-react);
+    box-shadow: 0 2px 10px var(--color-react);
 }
 
 #nodejs
@@ -510,7 +511,7 @@ section {
     background-color: transparent;
     border: 1px solid var(--color-nodejs);
     color: var(--secondary-color);
-    box-shadow: 0 5px 10px var(--color-nodejs);
+    box-shadow: 0 2px 10px var(--color-nodejs);
 }
 
 #bootstrap
@@ -520,7 +521,7 @@ section {
     background-color: transparent;
     border: 1px solid var(--color-bootstrap);
     color: var(--secondary-color);
-    box-shadow: 0 5px 10px var(--color-bootstrap);
+    box-shadow: 0 2px 10px var(--color-bootstrap);
 }
 
 #php
@@ -530,7 +531,7 @@ section {
     background-color: transparent;
     border: 1px solid var(--color-php);
     color: var(--secondary-color);
-    box-shadow: 0 5px 10px var(--color-php);
+    box-shadow: 0 2px 10px var(--color-php);
 }
 
 #mysql
@@ -540,7 +541,7 @@ section {
     background-color: transparent;
     border: 1px solid var(--color-mysql);
     color: var(--secondary-color);
-    box-shadow: 0 5px 10px var(--color-mysql);
+    box-shadow: 0 2px 10px var(--color-mysql);
 }
 
 
@@ -549,14 +550,12 @@ section {
     max-width: 1200px;
     width: 100%;
     height: auto;
-    /* usar auto ou ajustar conforme o conteúdo */
     padding: 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     scroll-margin-top: 50px;
-    /* altura da sua navbar fixa */
 }
 
 .projects .project-title {
@@ -584,17 +583,13 @@ section {
     margin-bottom: 20px;
 }
 
-.projects .projetos-extra {
-    display: none;
-}
-
 .projects .projects-content .project-card {
     background: var(--primary-color);
     border-radius: none;
     text-align: center;
     width: 360px;
     cursor: pointer;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.6s ease-in-out;
 }
 
 .projects .projects-content .project-card:hover {
@@ -603,10 +598,15 @@ section {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+.projects .projects-content .project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px var(--tertiary-color);
+    transition: transform 0.5s ease-in-out;
+}
+
 .projects .projects-content .project-card img {
     max-width: 100%;
     height: auto;
-
     margin-bottom: 10px;
 }
 
